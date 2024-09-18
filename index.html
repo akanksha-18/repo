@@ -1,51 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leaderboard</title>
-  <style>
-    .leaderboard {
-      margin-top: 20px;
-      width: 50%;
-      margin: 0 auto;
-    }
-    .entry {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      background-color: #f0f0f0;
-      margin-bottom: 10px;
-      border-radius: 5px;
-    }
-    button {
-      margin-left: 5px;
-    }
-    form {
-      margin-bottom: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Flip Cards</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Leaderboard</h1>
-    <form id="leaderboard-form">
-      <input type="text" id="firstName" placeholder="First Name" required>
-      <input type="text" id="lastName" placeholder="Last Name" required>
-      <select id="country" required>
-        <option value="USA">USA</option>
-        <option value="India">India</option>
-        <option value="UK">UK</option>
-        <option value="Australia">Australia</option>
-      </select>
-      <input type="number" id="score" placeholder="Score" required>
-      <button type="submit">Add</button>
-    </form>
-
-    <div id="leaderboard" class="leaderboard"></div>
-  </div>
-
-  <script src="leaderboard.js"></script>
+    <div class="controls">
+        <select id="type-filter">
+            <option value="">All Types</option>
+            <option value="normal">Normal</option>
+            <option value="fire">Fire</option>
+            <option value="water">Water</option>
+            <option value="electric">Electric</option>
+            <option value="grass">Grass</option>
+            <option value="ice">Ice</option>
+            <option value="fighting">Fighting</option>
+            <option value="poison">Poison</option>
+            <option value="ground">Ground</option>
+            <option value="flying">Flying</option>
+            <option value="psychic">Psychic</option>
+            <option value="bug">Bug</option>
+            <option value="rock">Rock</option>
+            <option value="ghost">Ghost</option>
+            <option value="dragon">Dragon</option>
+            <option value="dark">Dark</option>
+            <option value="steel">Steel</option>
+            <option value="fairy">Fairy</option>
+        </select>
+        <input type="text" id="search-input" placeholder="Search Pokémon">
+    </div>
+    <div class="container"></div>
+    <button id="load-more-btn">Load More</button>
+    <script src="script.js"></script>
 </body>
 </html>
