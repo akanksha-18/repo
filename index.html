@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <style>
+    .leaderboard {
+      margin-top: 20px;
+      width: 50%;
+      margin: 0 auto;
+    }
+    .entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: #f0f0f0;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    button {
+      margin-left: 5px;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Leaderboard</h1>
+    <form id="leaderboard-form">
+      <input type="text" id="firstName" placeholder="First Name" required>
+      <input type="text" id="lastName" placeholder="Last Name" required>
+      <select id="country" required>
+        <option value="USA">USA</option>
+        <option value="India">India</option>
+        <option value="UK">UK</option>
+        <option value="Australia">Australia</option>
+      </select>
+      <input type="number" id="score" placeholder="Score" required>
+      <button type="submit">Add</button>
+    </form>
+
+    <div id="leaderboard" class="leaderboard"></div>
+  </div>
+
+  <script src="leaderboard.js"></script>
+</body>
+</html>
